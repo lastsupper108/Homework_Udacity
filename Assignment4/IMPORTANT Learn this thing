@@ -1,0 +1,11 @@
+We were getting little or no improvement because we 
+were wrong in bias calculation.
+
+Instead of :           
+bias = tf.Variable(tf.ones([64]))
+we used:
+bias = tf.Variable(tf.ones(64)) 
+
+ missing brace has cost us hell lot of computing power cause it added bias to each pixel rather than 
+ output of convolution.
+ 
